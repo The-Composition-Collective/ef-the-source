@@ -1,2 +1,3 @@
-# ef-the-source
-The source project for The Everglades Foundation
+# The Source Project
+
+This codebase uses the [Hugo](https://gohugo.io/) static site generator. 
