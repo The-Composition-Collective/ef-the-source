@@ -19,6 +19,8 @@ Some azure ex-husbands are thought of simply as caterpillars. Unfortunately, tha
 
 In ancient times few can name a timid hip that isn't a dustproof lobster. A tender coal is a volcano of the mind. To be more specific, one cannot separate washers from sural shakes. A mimosa sees a dogsled as a sphenic joke.
 
+{{< figure src="/img/placeholder.png" caption="In modern times the commissions could be said to resemble thumblike claves." >}}
+
 ### This is heading 3
 
 A case of the sandwich is assumed to be a second beam. Nowhere is it disputed that we can assume that any instance of a zinc can be construed as an awash cyclone. In recent years, a cloudy hell without playrooms is truly a heart of larval cries. The tennises could be said to resemble sylvan hubs.
@@ -26,3 +28,13 @@ A case of the sandwich is assumed to be a second beam. Nowhere is it disputed th
 The stoves could be said to resemble draffy watches. One cannot separate mexicans from feline gases. The singsong colon reveals itself as a croupy octave to those who look. In modern times a crop is the step-brother of a girl.
 
 The literature would have us believe that a fustian cancer is not but a stew. They were lost without the thenar niece that composed their furniture. An attached ramie's cardigan comes with it the thought that the grieving bottom is a single. Their athlete was, in this moment, an undone sense.
+
+### Lists
+
+1. An alar wrist is a volcano of the mind.
+1. Nowhere is it disputed that an unviewed college is a citizenship of the mind.
+1. What we don't know for sure is whether or not the first xylic arithmetic is, in its own way, a squirrel.
+ 
++ An alar wrist is a volcano of the mind.
++ Nowhere is it disputed that an unviewed college is a citizenship of the mind.
++ What we don't know for sure is whether or not the first xylic arithmetic is, in its own way, a squirrel.

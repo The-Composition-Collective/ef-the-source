@@ -8,7 +8,7 @@
 :root {
   --serif: "Raleway", serif;
   --sans: "Poppins", sans-serif;
-  --media-background: rgba(150, 150, 150, 1);
+  --media-background: #efefef;
 }
 
 body {
@@ -31,10 +31,25 @@ p {
   font: 1.2rem/1.5em var(--serif);
 }
 
+ol, ul {
+  padding-left: 1.5em;
+}
+
+li {
+  font: 1.2rem/1.5em var(--serif);
+}
+
 figure {
   margin: 0;
-  background-color: var(--media-background);
-  padding-top: 56.25%;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+figcaption p {
+  font: 0.9rem/1.4em var(--sans);
 }
 
 header, footer {
