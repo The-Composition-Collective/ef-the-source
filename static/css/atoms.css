@@ -9,6 +9,9 @@
   --serif: "Raleway", serif;
   --sans: "Poppins", sans-serif;
   --media-background: #efefef;
+  --element-margin: 1em auto;
+  --element-padding: 0 20px;
+  --element-width: 680px;
 }
 
 body {
@@ -57,8 +60,12 @@ header, footer {
   background-color: rgba(30,30,30,1);
 }
 
-/* Temporary */
-.design {
-  max-width: 680px;
-  margin: 0 auto;
+/* 
+ * Story page styles
+ */
+
+.story > * {
+  max-width: var(--element-width);
+  margin: var(--element-margin);
+  padding: var(--element-padding);
 }
