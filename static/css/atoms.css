@@ -3,14 +3,14 @@
  * The Source project
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=block');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-  --serif: "Raleway", serif;
-  --sans: "Poppins", sans-serif;
+  --header-font: "Bebas Neue", sans-serif;
+  --body-font: "Open Sans", sans-serif;
   --media-background: #efefef;
-  --element-margin: 1em auto;
-  --element-padding: 0 20px;
+  --element-margin: 18px;
+  --element-padding: 24px;
   --element-width: 680px;
 }
 
@@ -19,23 +19,23 @@ body {
 }
 
 h1 {
-  font: 400 3rem/1.4em var(--sans);
+  font: 400 64px/1.4em var(--header-font);
 }
 
 h2 {
-  font: 400 2.25rem/1.4em var(--sans);
+  font: 400 40px/1.4em var(--header-font);
 }
 
 h3 {
-  font: 400 1.5rem/1.4em var(--sans);
+  font: 400 30px/1.4em var(--header-font);
 }
 
 p {
-  font: 1.2rem/1.5em var(--serif);
+  font: 18px/1.5em var(--body-font);
 }
 
 li {
-  font: 1.2rem/1.5em var(--serif);
+  font: 18px/1.5em var(--body-font);
 }
 
 figure {
@@ -48,12 +48,51 @@ figure img {
 }
 
 figcaption p {
-  font: 0.9rem/1.4em var(--sans);
+  font: 0.9rem/1.4em var(--body-font);
 }
 
-header, footer {
+nav {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: var(--element-padding);
+  z-index: 2;
+  background: linear-gradient(rgba(0,0,0,0.5), transparent 95%); 
+}
+
+nav a {
+  font: 400 24px/1em var(--header-font);
+  color: white;
+  text-decoration: none;
+}
+
+footer {
   min-height: 100px;
   background-color: rgba(30,30,30,1);
+}
+
+/*
+ * Forms
+ */
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input, button {
+  display: block;
+  font: 1em var(--body-font);
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.login-panel {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
 }
 
 /* 
@@ -62,6 +101,10 @@ header, footer {
 
 .story > * {
   max-width: var(--element-width);
-  margin: var(--element-margin);
-  padding: var(--element-padding);
+  margin: var(--element-margin) auto;
+  padding: 0 var(--element-padding);
+}
+
+.story > :first-child {
+  margin-top: 0;
 }
