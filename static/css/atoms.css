@@ -60,6 +60,7 @@ nav {
   padding: var(--element-padding);
   z-index: 2;
   background: linear-gradient(rgba(0,0,0,0.5), transparent 95%); 
+  box-sizing: border-box;
 }
 
 nav a {
