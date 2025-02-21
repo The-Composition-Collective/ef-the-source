@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "pilgreen-io"
+  },
+  "targets": {
+    "pilgreen-io": {
+      "hosting": {
+        "thesource": [
+          "ef-thesource"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
