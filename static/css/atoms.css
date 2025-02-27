@@ -109,3 +109,19 @@ input, button {
 .story > :first-child {
   margin-top: 0;
 }
+
+/*
+ * Scroller container
+ */
+
+.scroller {
+  max-width: unset;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > * {
+  scroll-snap-align: start;
+}
