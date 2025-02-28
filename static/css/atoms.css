@@ -12,6 +12,7 @@
   --element-margin: 18px;
   --element-padding: 24px;
   --element-width: 680px;
+  --panel-placement: end start;
 }
 
 body {
@@ -111,17 +112,26 @@ input, button {
 }
 
 /*
- * Scroller container
+ * Panels
  */
 
-.scroller {
-  max-width: unset;
-  padding: 0;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+.panel {
+  display: grid;
+  place-content: var(--panel-placement);
+  padding: 24px;
+  color: white;
 }
 
-.scroller > * {
-  scroll-snap-align: start;
+.panel > * {
+  margin: 0;
+  max-width: 600px;
+  opacity: 0;
+  transform: scale(0.4);
+  transform-origin: left;
+  transition: all .5s ease;
+}
+
+.panel.animate > * {
+  transform: scale(1);
+  opacity: 1;
 }
