@@ -4,31 +4,26 @@ title = 'Atoms'
 layout = 'single'
 +++
 
-<ef-vignette>
-  <img slot="background" src="/img/panel-1.jpg" width="1408" height="768">
-  <div class="panel">
-    <h1 class="h1">Panel Header</h1>
-    <p>Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.</p>
-  </div>
+{{% panel src="/img/panel-1.jpg" %}}
+# Panel One
 
-  <img slot="background" src="/img/panel-2.jpg" width="1408" height="768">
-  <div class="panel" style="--panel-placement: end end">
-    <h1 class="h1">Panel Header</h1>
-    <p>Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.</p>
-  </div>
+Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.
+{{% /panel %}}
 
-  <img slot="background" src="/img/gradient.svg" width="1920c" height="1080">
-  <div class="panel" style="--panel-placement: center center">
-    <h1 class="h1">Panel Header</h1>
-    <p>Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.</p>
-  </div>
+{{% panel src="/img/panel-2.jpg" %}}
+# Panel Two
 
-  <img slot="background" src="/img/panel-3.jpg" width="1408" height="768">
-  <div class="panel">
-    <h1 class="h1">Panel Header</h1>
-    <p>Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.</p>
-  </div>
-</ef-vignette>
+Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.
+{{% /panel %}}
+
+{{% panel src="/img/panel-3.jpg" %}}
+# Panel Three
+
+Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.
+{{% /panel %}}
+
+
+{{% story %}}
 
 # This is heading 1
 
@@ -65,3 +60,11 @@ The literature would have us believe that a fustian cancer is not but a stew. Th
 + An alar wrist is a volcano of the mind.
 + Nowhere is it disputed that an unviewed college is a citizenship of the mind.
 + What we don't know for sure is whether or not the first xylic arithmetic is, in its own way, a squirrel.
+
+{{% /story %}}
+
+{{% panel src="/img/panel-2.jpg" %}}
+# Panel Four
+
+Those salts are nothing more than libras. Recent controversy aside, we can assume that any instance of an attention can be construed as a tapelike patio. The cricket of an office becomes an altered vacuum.
+{{% /panel %}}

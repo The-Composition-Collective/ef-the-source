@@ -3,16 +3,19 @@
  * The Source project
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 :root {
   --header-font: "Bebas Neue", sans-serif;
   --body-font: "Open Sans", sans-serif;
+  --content-width: 680px;
+  --margin: 18px;
+  --padding: 24px;
+
   --media-background: #efefef;
   --element-margin: 18px;
   --element-padding: 24px;
   --element-width: 680px;
-  --panel-placement: end start;
+
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -58,7 +61,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 18px;
-  padding: var(--element-padding);
+  padding: var(--padding);
   z-index: 2;
   background: linear-gradient(rgba(0,0,0,0.5), transparent 95%); 
   box-sizing: border-box;
@@ -91,47 +94,59 @@ input, button {
   cursor: pointer;
 }
 
-.login-panel {
-  min-height: 50vh;
-  display: grid;
-  place-items: center;
-}
-
-/* 
- * Story page styles
- */
-
-.story > * {
-  max-width: var(--element-width);
-  margin: var(--element-margin) auto;
-  padding: 0 var(--element-padding);
-}
-
-.story > :first-child {
-  margin-top: 0;
-}
-
 /*
  * Panels
  */
 
 .panel {
   display: grid;
-  place-content: var(--panel-placement);
-  padding: 24px;
-  color: white;
-}
-
-.panel > * {
+  max-width: unset;
+  min-height: 100vh;
   margin: 0;
-  max-width: 600px;
-  opacity: 0;
-  transform: scale(0.4);
-  transform-origin: left;
-  transition: all .5s ease;
+  padding: 24px;
+  box-sizing: border-box;
+  color: white;
+  background: rgba(25, 25, 25, 0.8);
+  place-content: var(--placement, end start);
+  scroll-snap-align: start;
 }
 
-.panel.animate > * {
-  transform: scale(1);
+.panel .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.panel.active .background {
   opacity: 1;
+}
+
+.panel .info {
+  position: relative;
+  max-width: var(--content-width);
+}
+
+.panel .info > * {
+  margin: 0;
+}
+
+/* 
+ * Text blocks
+ */
+
+.story {
+  position: relative;
+  background-color: white;
+  padding: var(--padding);
+  scroll-snap-align: start;
+}
+
+.story > * {
+  max-width: var(--content-width);
+  margin: var(--margin) auto;
 }
