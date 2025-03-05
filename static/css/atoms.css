@@ -7,13 +7,7 @@
   --header-font: "Bebas Neue", sans-serif;
   --body-font: "Open Sans", sans-serif;
   --content-width: 680px;
-  --margin: 18px;
-  --padding: 24px;
-
-  --media-background: #efefef;
-  --element-margin: 18px;
-  --element-padding: 24px;
-  --element-width: 680px;
+  --space: 20px;
 
   scroll-snap-type: y mandatory;
 }
@@ -55,24 +49,6 @@ figcaption p {
   font: 0.9rem/1.4em var(--body-font);
 }
 
-nav {
-  position: absolute;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  padding: var(--padding);
-  z-index: 2;
-  background: linear-gradient(rgba(0,0,0,0.5), transparent 95%); 
-  box-sizing: border-box;
-}
-
-nav a {
-  font: 400 24px/1em var(--header-font);
-  color: white;
-  text-decoration: none;
-}
-
 footer {
   min-height: 100px;
   background-color: rgba(30,30,30,1);
@@ -93,6 +69,69 @@ input, button {
   padding: 0.5em 1em;
   cursor: pointer;
 }
+
+/*
+ * Flag
+ */
+
+.flag {
+  position: absolute;
+  display: grid;
+  width: 100vw;
+  gap: var(--space) calc(var(--space) * 2);
+  background: rgba(0,0,0,0.25);
+  padding: var(--space);
+  padding-top: calc(var(--space) / 2);
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 90px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  font: 400 24px/1em var(--header-font);
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:after {
+  content: "";
+  display: block;
+  height: 2px;
+}
+
+.nav a:hover:after {
+  background-color: white;
+}
+
+@media(min-width: 768px) {
+  .flag {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .logo {
+    height: 140px;
+  }
+
+  .nav {
+    transform: translateY(calc(var(--space) / 2 + 2px));
+  }
+
+  .nav a {
+    font-size: 40px;
+  }
+}
+
 
 /*
  * Panels
@@ -142,11 +181,11 @@ input, button {
 .story {
   position: relative;
   background-color: white;
-  padding: var(--padding);
+  padding: var(--space);
   scroll-snap-align: start;
 }
 
 .story > * {
   max-width: var(--content-width);
-  margin: var(--margin) auto;
+  margin: var(--space) auto;
 }
