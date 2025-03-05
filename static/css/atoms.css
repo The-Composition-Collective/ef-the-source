@@ -6,7 +6,7 @@
 :root {
   --header-font: "Bebas Neue", sans-serif;
   --body-font: "Open Sans", sans-serif;
-  --content-width: 680px;
+  --content-width: 950px;
   --space: 20px;
 
   scroll-snap-type: y mandatory;
@@ -132,60 +132,125 @@ input, button {
   }
 }
 
+/*
+ * Vignettes
+ */
+
+.vignette {
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.vignette > .background {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transition: all .5s ease;
+}
+
+.vignette.mask > .background {
+  filter: blur(25px) brightness(0.6);
+  transform: scale(1.1);
+}
+
+/*
+ * Covers
+ */
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  gap: var(--space);
+  padding: var(--space);
+  box-sizing: border-box;
+  align-content: end;
+  justify-items: center;
+  color: white;
+}
+
+.cover > * {
+  margin: 0;
+}
+
+.more {
+  display: block;
+  width: auto;
+  height: 24px;
+  fill: white;
+}
 
 /*
  * Panels
  */
 
 .panel {
-  display: grid;
-  max-width: unset;
+  position: relative;
+  padding: var(--space);
+  padding-top: 60vh;
+  margin: 0 auto;
+  max-width: var(--content-width);
   min-height: 100vh;
-  margin: 0;
-  padding: 24px;
   box-sizing: border-box;
   color: white;
-  background: rgba(25, 25, 25, 0.8);
-  place-content: var(--placement, end start);
   scroll-snap-align: start;
 }
 
-.panel .background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity .5s ease;
-}
+/* .panel { */
+/*   display: grid; */
+/*   max-width: unset; */
+/*   min-height: 100vh; */
+/*   margin: 0; */
+/*   padding: 24px; */
+/*   box-sizing: border-box; */
+/*   color: white; */
+/*   background: rgba(25, 25, 25, 0.8); */
+/*   place-content: var(--placement, end start); */
+/*   scroll-snap-align: start; */
+/* } */
 
-.panel.active .background {
-  opacity: 1;
-}
+/* .panel .background { */
+/*   position: fixed; */
+/*   top: 0; */
+/*   left: 0; */
+/*   width: 100vw; */
+/*   height: 100vh; */
+/*   object-fit: cover; */
+/*   opacity: 0; */
+/*   transition: opacity .5s ease; */
+/* } */
 
-.panel .info {
-  position: relative;
-  max-width: var(--content-width);
-}
+/* .panel.active .background { */
+/*   opacity: 1; */
+/* } */
 
-.panel .info > * {
-  margin: 0;
-}
+/* .panel .info { */
+/*   position: relative; */
+/*   max-width: var(--content-width); */
+/* } */
+
+/* .panel .info > * { */
+/*   margin: 0; */
+/* } */
 
 /* 
  * Text blocks
  */
 
-.story {
-  position: relative;
-  background-color: white;
-  padding: var(--space);
-  scroll-snap-align: start;
-}
+/* .story { */
+/*   position: relative; */
+/*   background-color: white; */
+/*   padding: var(--space); */
+/*   scroll-snap-align: start; */
+/* } */
 
-.story > * {
-  max-width: var(--content-width);
-  margin: var(--space) auto;
-}
+/* .story > * { */
+/*   max-width: var(--content-width); */
+/*   margin: var(--space) auto; */
+/* } */

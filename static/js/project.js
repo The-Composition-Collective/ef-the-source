@@ -4,16 +4,18 @@
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    e.target.classList.toggle("active", e.isIntersecting);
+    const vignette = e.target.closest(".vignette");
+
+    if(vignette) {
+      vignette.classList.toggle("mask", e.isIntersecting == false);
+    }
   })
-}, {
-  rootMargin: "0px 0px -100% 0px"
 });
 
 /*
  * Panels
  */
 
-document.querySelectorAll(".panel").forEach(ele => {
+document.querySelectorAll(".cover").forEach(ele => {
   observer.observe(ele);
 });
