@@ -153,7 +153,6 @@ input, button {
 
 .vignette.mask > .background {
   filter: blur(25px) brightness(0.6);
-  transform: scale(1.1);
 }
 
 /*
@@ -173,6 +172,7 @@ input, button {
   align-content: end;
   justify-items: center;
   color: white;
+  background: linear-gradient(to bottom, rgba(25,25,25,0) 60%, rgba(25,25,25,60));
 }
 
 .cover > * {
@@ -201,56 +201,3 @@ input, button {
   color: white;
   scroll-snap-align: start;
 }
-
-/* .panel { */
-/*   display: grid; */
-/*   max-width: unset; */
-/*   min-height: 100vh; */
-/*   margin: 0; */
-/*   padding: 24px; */
-/*   box-sizing: border-box; */
-/*   color: white; */
-/*   background: rgba(25, 25, 25, 0.8); */
-/*   place-content: var(--placement, end start); */
-/*   scroll-snap-align: start; */
-/* } */
-
-/* .panel .background { */
-/*   position: fixed; */
-/*   top: 0; */
-/*   left: 0; */
-/*   width: 100vw; */
-/*   height: 100vh; */
-/*   object-fit: cover; */
-/*   opacity: 0; */
-/*   transition: opacity .5s ease; */
-/* } */
-
-/* .panel.active .background { */
-/*   opacity: 1; */
-/* } */
-
-/* .panel .info { */
-/*   position: relative; */
-/*   max-width: var(--content-width); */
-/* } */
-
-/* .panel .info > * { */
-/*   margin: 0; */
-/* } */
-
-/* 
- * Text blocks
- */
-
-/* .story { */
-/*   position: relative; */
-/*   background-color: white; */
-/*   padding: var(--space); */
-/*   scroll-snap-align: start; */
-/* } */
-
-/* .story > * { */
-/*   max-width: var(--content-width); */
-/*   margin: var(--space) auto; */
-/* } */
