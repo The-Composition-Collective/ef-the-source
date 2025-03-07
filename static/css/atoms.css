@@ -120,7 +120,7 @@ input, button {
   }
 
   .logo {
-    height: 140px;
+    height: 120px;
   }
 
   .nav {
@@ -128,7 +128,7 @@ input, button {
   }
 
   .nav a {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -142,17 +142,13 @@ input, button {
 }
 
 .vignette > .background {
+  display: block;
   position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  transition: all .5s ease;
-}
-
-.vignette.mask > .background {
-  filter: blur(25px) brightness(0.6);
 }
 
 /*
@@ -168,11 +164,12 @@ input, button {
   display: grid;
   gap: var(--space);
   padding: var(--space);
+  padding-bottom: 5vh;
   box-sizing: border-box;
   align-content: end;
   justify-items: center;
   color: white;
-  background: linear-gradient(to bottom, rgba(25,25,25,0) 60%, rgba(25,25,25,60));
+  background: linear-gradient(to bottom, transparent 30%, rgba(25,25,25,60));
 }
 
 .cover > * {
@@ -194,10 +191,26 @@ input, button {
   position: relative;
   padding: var(--space);
   padding-top: 60vh;
-  margin: 0 auto;
-  max-width: var(--content-width);
   min-height: 100vh;
   box-sizing: border-box;
   color: white;
   scroll-snap-align: start;
+  backdrop-filter: blur(25px) brightness(0.4);
+}
+
+.panel > * {
+  margin: 1em auto;
+  max-width: var(--content-width);
+}
+
+.about {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  background-color: #0F2538;
+  padding: var(--space);
+}
+
+.info * {
+  margin: 0;
 }

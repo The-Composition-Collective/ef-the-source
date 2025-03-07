@@ -4,10 +4,8 @@
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    const vignette = e.target.closest(".vignette");
-
-    if(vignette) {
-      vignette.classList.toggle("mask", e.isIntersecting == false);
+    if(e.isIntersecting) {
+      e.target.play();
     }
   })
 });
@@ -16,6 +14,6 @@ const observer = new IntersectionObserver((entries) => {
  * Panels
  */
 
-document.querySelectorAll(".cover").forEach(ele => {
+document.querySelectorAll("video.background").forEach(ele => {
   observer.observe(ele);
 });
