@@ -6,8 +6,12 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if(e.isIntersecting) {
       e.target.play();
+    } else {
+      e.target.pause();
     }
   })
+}, {
+  threshold: 0.5
 });
 
 /*

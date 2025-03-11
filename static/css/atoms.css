@@ -169,11 +169,17 @@ input, button {
   align-content: end;
   justify-items: center;
   color: white;
-  background: linear-gradient(to bottom, transparent 30%, rgba(25,25,25,60));
+  background: linear-gradient(to top, rgb(25,25,25), rgba(25,25,25,60) 25%, transparent 35%);
 }
 
 .cover > * {
-  margin: 0;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  text-align: center;
+}
+
+.cover > h1 {
+  line-height: 1em;
 }
 
 .more {
@@ -190,7 +196,7 @@ input, button {
 .panel {
   position: relative;
   padding: var(--space);
-  padding-top: 60vh;
+  padding-top: 40vh;
   min-height: 100vh;
   box-sizing: border-box;
   color: white;
