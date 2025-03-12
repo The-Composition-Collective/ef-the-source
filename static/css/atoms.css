@@ -56,6 +56,22 @@ footer {
   background-color: rgba(30,30,30,1);
 }
 
+blockquote {
+  border-left: 2px solid white;
+  padding-left: var(--space);
+  box-sizing: border-box;
+}
+
+blockquote p {
+  font: 700 32px/40px var(--body-font);
+  margin: 0;
+}
+
+blockquote .cite {
+  font: 400 24px/40px var(--body-font);
+  margin-top: 10px;
+}
+
 /*
  * Forms
  */
@@ -184,7 +200,25 @@ input, button {
 .panel .subhead {
   font: 600 24px/30px var(--body-font);
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+}
+
+.panel blockquote {
+  margin: 3rem auto;
+}
+
+.panel .caption {
+  font: 700 14px/18px var(--body-font);
+  margin-top: 80px;
+}
+
+.panel .caption:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 12px;
 }
 
 .about {
@@ -193,6 +227,9 @@ input, button {
   text-align: center;
   background-color: #0F2538;
   padding: var(--space);
+  min-height: 100vh;
+  color: white;
+  scroll-snap-align: start;
 }
 
 .info * {
