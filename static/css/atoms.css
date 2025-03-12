@@ -8,6 +8,8 @@
   --body-font: "Open Sans", sans-serif;
   --content-width: 950px;
   --space: 20px;
+  --panel-background: rgba(0,0,0,0.6);
+  --panel-fade: 50px;
 
   scroll-snap-type: y mandatory;
 }
@@ -17,7 +19,7 @@ body {
 }
 
 h1 {
-  font: 400 64px/1.4em var(--header-font);
+  font: 400 64px/1em var(--header-font);
 }
 
 h2 {
@@ -89,7 +91,7 @@ input, button {
 .logo {
   display: block;
   width: auto;
-  height: 90px;
+  height: 50px;
 }
 
 .nav {
@@ -119,16 +121,8 @@ input, button {
     align-items: center;
   }
 
-  .logo {
-    height: 120px;
-  }
-
   .nav {
-    transform: translateY(calc(var(--space) / 2 + 2px));
-  }
-
-  .nav a {
-    font-size: 30px;
+    transform: translateY(6px);
   }
 }
 
@@ -149,44 +143,7 @@ input, button {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-}
-
-/*
- * Covers
- */
-
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  gap: var(--space);
-  padding: var(--space);
-  padding-bottom: 5vh;
-  box-sizing: border-box;
-  align-content: end;
-  justify-items: center;
-  color: white;
-  background: linear-gradient(to top, rgb(25,25,25), rgba(25,25,25,60) 25%, transparent 35%);
-}
-
-.cover > * {
-  margin: 0 auto;
-  max-width: var(--content-width);
-  text-align: center;
-}
-
-.cover > h1 {
-  line-height: 1em;
-}
-
-.more {
-  display: block;
-  width: auto;
-  height: 24px;
-  fill: white;
+  object-position: center bottom;
 }
 
 /*
@@ -196,17 +153,38 @@ input, button {
 .panel {
   position: relative;
   padding: var(--space);
-  padding-top: 40vh;
-  min-height: 100vh;
+  margin-top: calc((var(--space) + 64px + 1rem) * -1);
   box-sizing: border-box;
   color: white;
-  scroll-snap-align: start;
-  backdrop-filter: blur(25px) brightness(0.4);
+  background-color: var(--panel-background);
+  backdrop-filter: blur(5px);
+}
+
+.panel:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: var(--panel-fade);
+  top: calc(var(--panel-fade) * -1);
+  left: 0;
+  background: linear-gradient(to bottom, transparent, var(--panel-background) 90%);
 }
 
 .panel > * {
-  margin: 1em auto;
+  margin: 1rem auto;
   max-width: var(--content-width);
+}
+
+.panel .title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.panel .subhead {
+  font: 600 24px/30px var(--body-font);
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .about {
