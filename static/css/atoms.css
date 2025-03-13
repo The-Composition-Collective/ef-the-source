@@ -47,8 +47,9 @@ figure img {
   width: 100%;
 }
 
-figcaption p {
-  font: 0.9rem/1.4em var(--body-font);
+figcaption {
+  margin-top: 12px;
+  font: 700 14px/18px var(--body-font);
 }
 
 footer {
@@ -203,7 +204,8 @@ input, button {
   margin-bottom: 80px;
 }
 
-.panel blockquote {
+.panel blockquote,
+.panel figure {
   margin: 3rem auto;
 }
 
