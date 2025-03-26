@@ -168,9 +168,11 @@ input, button {
  */
 
 .panel {
+  --buffer: calc((var(--space) + 64px + 1rem) * -1);
+
   position: relative;
   padding: var(--space);
-  margin-top: calc((var(--space) + 64px + 1rem) * -1);
+  margin-top: var(--buffer);
   box-sizing: border-box;
   color: white;
   background-color: var(--panel-background);
@@ -222,6 +224,10 @@ input, button {
   background-color: white;
   margin-bottom: 12px;
 }
+
+/*
+ * Other 
+ */
 
 .about {
   display: grid;
