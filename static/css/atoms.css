@@ -8,10 +8,12 @@
   --body-font: "Open Sans", sans-serif;
   --content-width: 950px;
   --space: 20px;
-  --panel-background: rgba(0,0,0,0.6);
-  --panel-fade: 50px;
+  --panel-background: rgba(0,0,0,0.8);
+  --panel-fade: 75px;
+  --background-color: black;
 
   scroll-snap-type: y mandatory;
+  background-color: var(--background-color);
 }
 
 body {
@@ -23,7 +25,7 @@ h1 {
 }
 
 h2 {
-  font: 400 40px/1.4em var(--header-font);
+  font: 400 48px/1em var(--header-font);
 }
 
 h3 {
@@ -168,11 +170,11 @@ input, button {
  */
 
 .panel {
-  --buffer: calc((var(--space) + 64px + 1rem) * -1);
+  --top: calc((var(--space) + 64px + 1rem) * -1);
 
   position: relative;
   padding: var(--space);
-  margin-top: var(--buffer);
+  margin-top: var(--top);
   box-sizing: border-box;
   color: white;
   background-color: var(--panel-background);
@@ -195,17 +197,6 @@ input, button {
   max-width: var(--content-width);
 }
 
-.panel .title {
-  text-align: center;
-  margin-top: 0;
-}
-
-.panel .subhead {
-  font: 600 24px/30px var(--body-font);
-  text-align: center;
-  margin-bottom: 80px;
-}
-
 .panel blockquote,
 .panel figure {
   margin: 3rem auto;
@@ -217,6 +208,115 @@ input, button {
 }
 
 .panel .caption:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 12px;
+}
+
+/*
+ * Grid 
+ */
+
+.panel.wide {
+  --content-width: 1240px;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space) 140px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 275px;
+  }
+}
+
+/*
+ * Intro
+ */
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro .category {
+  font: 600 24px/30px var(--body-font);
+}
+
+.swoop {
+  display: block;
+  margin: calc(var(--space)/2) auto;
+}
+
+.intro .title {
+  margin: var(--space) 0;
+}
+
+.intro .subhead {
+  font: 600 24px/30px var(--body-font);
+  margin: 40px 0;
+}
+
+/*
+ * Aside
+ */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+  align-items: start;
+}
+
+.fact {
+  display: grid;
+  gap: calc(var(--space) / 2);
+  opacity: 0;
+  transition: opacity 1s ease-in 0.5s;
+}
+
+.fact.animate {
+  opacity: 1;
+}
+
+.fact * {
+  margin: 0;
+}
+
+/*
+ * Scrolling Panels
+ */
+
+scrolling-panel figure {
+  position: relative;
+  display: flex;
+}
+
+scrolling-panel figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+scrolling-panel figure figcaption {
+  position: relative;
+  align-self: end;
+  background: var(--panel-background);
+  color: white;
+  padding: var(--space);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+scrolling-panel figure figcaption:before {
   content: "";
   display: block;
   width: 100px;
@@ -240,6 +340,15 @@ input, button {
   scroll-snap-align: start;
 }
 
-.info * {
-  margin: 0;
+.info {
+  max-width: 475px;
+  margin: 0 auto;
+}
+
+.info h1 {
+  margin: var(--space) 0;
+}
+
+.info p {
+  font: 600 18px/24px var(--body-font);
 }

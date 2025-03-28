@@ -1,17 +1,27 @@
 /*
- * Intersection Observer to activate background
+ * Intersection Observers
  */
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(e.isIntersecting) {
-      e.target.play();
+const videoObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.play();
     } else {
-      e.target.pause();
+      entry.target.pause();
     }
   })
 }, {
   threshold: 0.5
+});
+
+const animateObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add("animate")
+    }
+  });
+}, {
+  threshold: 1
 });
 
 /*
@@ -19,5 +29,13 @@ const observer = new IntersectionObserver((entries) => {
  */
 
 document.querySelectorAll("video.background").forEach(ele => {
-  observer.observe(ele);
+  videoObserver.observe(ele);
+});
+
+/*
+ * Facts
+ */
+
+document.querySelectorAll(".fact").forEach(ele => {
+  animateObserver.observe(ele);
 });

@@ -17,7 +17,7 @@ class ScrollingPanel extends HTMLElement {
       ::slotted(*) {
         align-self: start;
         flex-shrink: 0;
-        width: 100%;
+        width: var(--img-width, 90%);
         height: 100%;
         object-fit: cover;
       }
@@ -36,8 +36,9 @@ class ScrollingPanel extends HTMLElement {
   }
 
   connectedCallback() {
+    const rect = this.getBoundingClientRect();
     this.observer.observe(this); // Observe the custom element itself
-    this.nextElementSibling.style.setProperty("--buffer", `calc(100vh * ${this.children.length + 1}`);
+    this.nextElementSibling.style.setProperty("--top", `${this.scrollWidth - rect.width}px`);
   }
 
   disconnectedCallback() {
