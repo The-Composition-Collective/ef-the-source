@@ -9,7 +9,7 @@
   --content-width: 950px;
   --space: 20px;
   --panel-background: rgba(0,0,0,0.8);
-  --panel-fade: 75px;
+  --panel-fade: 150px;
   --background-color: black;
 
   scroll-snap-type: y mandatory;
@@ -66,12 +66,12 @@ blockquote {
 }
 
 blockquote p {
-  font: 700 32px/40px var(--body-font);
+  font: 700 20px/28px var(--body-font);
   margin: 0;
 }
 
 blockquote .cite {
-  font: 400 24px/40px var(--body-font);
+  font: 400 18px/44px var(--body-font);
   margin-top: 10px;
 }
 
@@ -170,8 +170,6 @@ input, button {
  */
 
 .panel {
-  --top: calc((var(--space) + 64px + 1rem) * -1);
-
   position: relative;
   padding: var(--space);
   margin-top: var(--top);
@@ -229,6 +227,10 @@ input, button {
   gap: var(--space) 140px;
 }
 
+.grid > div :first-child {
+  margin-top: 0;
+}
+
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 275px;
@@ -257,9 +259,14 @@ input, button {
   margin: var(--space) 0;
 }
 
-.intro .subhead {
+.subhead {
   font: 600 24px/30px var(--body-font);
-  margin: 40px 0;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.lead-intro {
+  margin: -250px auto 150px;
 }
 
 /*
@@ -286,6 +293,18 @@ input, button {
 
 .fact * {
   margin: 0;
+}
+
+.fact:nth-child(2) {
+  transition-delay: 1s;
+}
+
+.fact:nth-child(3) {
+  transition-delay: 2s;
+}
+
+.fact:nth-child(4) {
+  transition-delay: 3s;
 }
 
 /*
