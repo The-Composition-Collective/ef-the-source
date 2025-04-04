@@ -33,11 +33,20 @@ h3 {
 }
 
 p {
-  font: 18px/1.5em var(--body-font);
+  font: 17px/1.5em var(--body-font);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: bold;
 }
 
 li {
-  font: 18px/1.5em var(--body-font);
+  font: 17px/1.5em var(--body-font);
 }
 
 figure {
@@ -51,7 +60,7 @@ figure img {
 
 figcaption {
   margin-top: 12px;
-  font: 700 14px/18px var(--body-font);
+  font: 700 14px/17px var(--body-font);
 }
 
 footer {
@@ -71,7 +80,7 @@ blockquote p {
 }
 
 blockquote .cite {
-  font: 400 18px/44px var(--body-font);
+  font: 400 17px/44px var(--body-font);
   margin-top: 10px;
 }
 
@@ -201,7 +210,7 @@ input, button {
 }
 
 .panel .caption {
-  font: 700 14px/18px var(--body-font);
+  font: 700 14px/17px var(--body-font);
   margin-top: 80px;
 }
 
@@ -260,13 +269,13 @@ input, button {
 }
 
 .subhead {
-  font: 600 24px/30px var(--body-font);
-  margin: 40px auto;
+  font: 600 23px/30px var(--body-font);
+  margin: 0px auto;
   text-align: center;
 }
 
 .lead-intro {
-  margin: -250px auto 150px;
+  margin: -225px auto 150px;
 }
 
 /*
@@ -276,7 +285,7 @@ input, button {
 .column {
   display: flex;
   flex-direction: column;
-  gap: var(--space);
+  gap: calc(var(--space) * 2);
   align-items: start;
 }
 
@@ -293,6 +302,11 @@ input, button {
 
 .fact * {
   margin: 0;
+}
+
+.fact img {
+  display: block;
+  width: 100%;
 }
 
 .fact:nth-child(2) {
@@ -316,7 +330,8 @@ scrolling-panel figure {
   display: flex;
 }
 
-scrolling-panel figure img {
+scrolling-panel figure img,
+scrolling-panel figure video {
   position: absolute;
   top: 0;
   left: 0;
@@ -369,5 +384,5 @@ scrolling-panel figure figcaption:before {
 }
 
 .info p {
-  font: 600 18px/24px var(--body-font);
+  font: 600 17px/24px var(--body-font);
 }

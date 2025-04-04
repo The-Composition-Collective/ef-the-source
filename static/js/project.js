@@ -28,7 +28,7 @@ const animateObserver = new IntersectionObserver(entries => {
  * Panels
  */
 
-document.querySelectorAll("video.background").forEach(ele => {
+document.querySelectorAll("video.background, scrolling-panel video").forEach(ele => {
   videoObserver.observe(ele);
 });
 
