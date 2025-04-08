@@ -2,7 +2,6 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 disableKinds = ['taxonomy', 'term']
-disableLiveReload = true
 
 [markup.goldmark.renderer]
 unsafe= true
