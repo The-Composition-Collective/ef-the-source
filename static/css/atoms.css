@@ -12,7 +12,6 @@
   --panel-fade: 150px;
   --background-color: black;
 
-  /* scroll-snap-type: y mandatory; */
   background-color: var(--background-color);
 }
 
@@ -160,7 +159,6 @@ input, button {
 
 .vignette {
   position: relative;
-  /* scroll-snap-align: start; */
 }
 
 .vignette > .background {
@@ -255,7 +253,6 @@ input, button {
 .intro {
   text-align: center;
   grid-area: intro;
-  /* margin-bottom: 40px; */
 }
 
 .intro .category {
@@ -266,11 +263,6 @@ input, button {
   content: url("/img/swoop.svg");
   display: block;
 }
-
-/* .swoop { */
-/*   display: block; */
-/*   margin: calc(var(--space)/2) auto; */
-/* } */
 
 .intro h1 {
   margin: calc(var(--space) / 2) 0;
@@ -315,13 +307,7 @@ aside {
   display: grid;
   gap: calc(var(--space) / 2);
   align-content: start;
-  /* opacity: 1; */
-  /* transition: opacity 1s ease-in 0.5s; */
 }
-
-/* .fact.animate { */
-/*   opacity: 1; */
-/* } */
 
 .fact * {
   margin: 0;
@@ -336,21 +322,10 @@ aside {
   width: 100%;
 }
 
-/* .fact:nth-child(2) { */
-/*   transition-delay: 1s; */
-/* } */
-
-/* .fact:nth-child(3) { */
-/*   transition-delay: 2s; */
-/* } */
-
-/* .fact:nth-child(4) { */
-/*   transition-delay: 3s; */
-/* } */
-
 .caption {
   font: 700 14px/17px var(--body-font);
   grid-area: caption;
+  margin-top: var(--space);
 }
 
 .caption:before {
@@ -430,11 +405,9 @@ scrolling-panel figure figcaption:before {
   display: grid;
   align-content: center;
   text-align: center;
-  /* background-color: #0F2538; */
   padding: var(--space);
   min-height: 100vh;
   color: white;
-  /* scroll-snap-align: start; */
 }
 
 .info {
