@@ -234,8 +234,8 @@ input, button {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 950px;
   margin: 0 auto;
+  --content-width: 950px;
 }
 
 /*
