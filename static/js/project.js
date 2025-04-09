@@ -14,21 +14,19 @@ const videoObserver = new IntersectionObserver(entries => {
   threshold: 0.5
 });
 
-const animateObserver = new IntersectionObserver(entries => {
+const gridObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.classList.add("animate")
-    }
+    entry.target.classList.toggle("show", entry.isIntersecting);
   });
 }, {
-  threshold: 1
+  threshold: 0.2
 });
 
 /*
  * Panels
  */
 
-document.querySelectorAll("video.background, scrolling-panel video, video.full-bleed").forEach(ele => {
+document.querySelectorAll("video").forEach(ele => {
   videoObserver.observe(ele);
 });
 
@@ -36,6 +34,6 @@ document.querySelectorAll("video.background, scrolling-panel video, video.full-b
  * Facts
  */
 
-document.querySelectorAll(".fact").forEach(ele => {
-  animateObserver.observe(ele);
+document.querySelectorAll(".grid").forEach(ele => {
+  gridObserver.observe(ele);
 });

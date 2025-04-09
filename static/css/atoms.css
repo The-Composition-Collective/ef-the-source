@@ -6,7 +6,7 @@
 :root {
   --header-font: "Bebas Neue", sans-serif;
   --body-font: "Open Sans", sans-serif;
-  --content-width: 950px;
+  --content-width: 1240px;
   --space: 20px;
   --panel-background: rgba(0,0,0,0.8);
   --panel-fade: 150px;
@@ -29,6 +29,10 @@ h2 {
 
 h3 {
   font: 400 30px/1.4em var(--header-font);
+}
+
+h4 {
+  font: 400 20px/1.4em var(--header-font);
 }
 
 p {
@@ -127,7 +131,7 @@ input, button {
 }
 
 .nav a {
-  font: 400 24px/1em var(--header-font);
+  font: 400 18px/1em var(--header-font);
   color: white;
   text-decoration: none;
 }
@@ -150,6 +154,10 @@ input, button {
 
   .nav {
     transform: translateY(6px);
+  }
+
+  .nav a {
+    font-size: 24px;
   }
 }
 
@@ -200,11 +208,11 @@ input, button {
 .panel > * {
   display: block;
   margin: 0 auto;
-  width: min(var(--content-width), 100vw);
+  width: min(var(--content-width), 100%);
 }
 
 .panel .full-bleed {
-  --content-width: 100vw;
+  width: 100vw;
   margin-left: calc(var(--space) * -1);
 }
 
@@ -213,12 +221,28 @@ input, button {
   margin: 3rem auto;
 }
 
+.panel audio {
+  width: revert;
+  margin-left: 0;
+}
+
+/*
+ * Column
+ */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 950px;
+  margin: 0 auto;
+}
+
 /*
  * Grid 
  */
 
 .grid {
-  --content-width: 1240px;
   display: grid;
   grid-template-areas: 
     "intro"
@@ -229,6 +253,18 @@ input, button {
   margin: 0 auto;
 }
 
+.grid > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s ease, transform .2s ease;
+}
+
+.grid.show > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 @media(min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 275px;
@@ -237,12 +273,6 @@ input, button {
       "content aside"
       ". ."
       "caption caption"
-  }
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 275px;
   }
 }
 
@@ -284,6 +314,7 @@ input, button {
 
 .content {
   grid-area: content;
+  transition-delay: 0.5s;
 }
 
 .content :first-child {
@@ -295,12 +326,13 @@ input, button {
  * Aside
  */
 
-aside {
+.grid aside {
   display: flex;
   flex-direction: column;
   gap: calc(var(--space) * 2);
   align-items: start;
   grid-area: aside;
+  transition-delay: 1s;
 }
 
 .fact {
@@ -355,7 +387,9 @@ aside {
 
 @media(min-width: 1140px) {
   .facts {
-    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-template-columns: unset;
   }
 }
 
@@ -403,8 +437,6 @@ scrolling-panel figure figcaption:before {
 
 .about {
   display: grid;
-  align-content: center;
-  text-align: center;
   padding: var(--space);
   min-height: 100vh;
   color: white;
@@ -413,6 +445,8 @@ scrolling-panel figure figcaption:before {
 .info {
   max-width: 475px;
   margin: 0 auto;
+  text-align: center;
+  align-self: center;
 }
 
 .info h1 {
@@ -421,4 +455,12 @@ scrolling-panel figure figcaption:before {
 
 .info p {
   font: 600 17px/24px var(--body-font);
+  margin: 0;
 }
+
+.about .resources {
+  align-self: end;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+

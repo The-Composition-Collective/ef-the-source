@@ -4,23 +4,25 @@ title = 'Atoms'
 layout = 'single'
 +++
 
-<div class="vignette">
+<div class="vignette" id="background">
   <video class="background" muted playsinline>
     <source src="/video/opener.mp4" type="video/mp4">
   </video>
   <div class="panel">
-    <div class="intro lead-intro">
-      <span class="category">EAA Resevoir</span>
-      <h1>It’s Worth It</h1>
-      <img class="down-arrow" src="/img/down.svg">
-    </div>
-    <p>From the mural-lined streets of Miami to the shell-strewn beaches of Sanibel Island, from the expanse of Lake Okeechobee to the coral cays of the Florida Keys, South Florida is bound together by water. The Kissimmee River carried rain into Lake Okeechobee for millennia, feeding the Everglades and the coastlines beyond. Yet decades of infrastructure development cut off that natural flow southward, harming Florida’s ecosystem, economy and water supply. Over the past 25 years, federal, state, tribal and local governments have worked to reverse the damage, fighting against the tide of population growth and environmental change. The largest missing piece of the puzzle is now under construction: the EAA Reservoir.</p>
-    
+    <div class="column">
+      <div class="intro lead-intro">
+        <span class="category">EAA Reservoir</span>
+        <h1>It’s Worth It</h1>
+        <img class="down-arrow" src="/img/down.svg">
+      </div>
+      <p>From the mural-lined streets of Miami to the shell-strewn beaches of Sanibel Island, from the expanse of Lake Okeechobee to the coral cays of the Florida Keys, South Florida is bound together by water. The Kissimmee River carried rain into Lake Okeechobee for millennia, feeding the Everglades and the coastlines beyond. Yet decades of infrastructure development cut off that natural flow southward, harming Florida’s ecosystem, economy and water supply. Over the past 25 years, federal, state, tribal and local governments have worked to reverse the damage, fighting against the tide of population growth and environmental change. The largest missing piece of the puzzle is now under construction: the EAA Reservoir.</p>
+      <audio src="https://s3.amazonaws.com/citizen-dj-assets.labs.loc.gov/audio/items/loc-fma/fma-184032.mp3" controls crossorigin="anonymous"></audio>
     <p class="caption">📍The EAA Reservoir site in 2023. </p>
+    </div>
   </div>
 </div>
 
-<div class="vignette">
+<div class="vignette" id="problem">
   <img class="background" src="/img/flood.jpg">
   <div class="panel">
     <div class="grid">
@@ -33,7 +35,7 @@ layout = 'single'
         <p>The Everglades was once a sweeping river of grass that covered most of South Florida, but in the 19th century Floridians began to drain the wetlands for farming. These changes slashed the Everglades to half its original size — and the new infrastructure couldn’t hold up during powerful hurricanes, leading to catastrophic flooding. In response, the U.S. Army Corps of Engineers built the Herbert Hoover Dike along the southern edge of Lake Okeechobee. Water that used to flow south was rerouted to the coasts via the St. Lucie and Caloosahatchee Rivers. More than 70 percent of the Everglades’ natural water flow was lost to the coasts, sparking fires and more devastating floods.</p>
         <p>The federal government responded with another round of interventions in the 1940s: establishing The Everglades National Park, designating farmland south of Lake Okeechobee as the Everglades Agricultural Area (EAA) and building a new system of canals and levees. By 1950, South Florida faced a deepening water management crisis — worsened by the very infrastructure meant to solve it.</p>
       </div>
-      <aside class="column">
+      <aside>
         <div class="fact">
           <h2>1928</h2>
           <p>Catastrophic hurricane and floods kill thousands of people near Lake Okeechobee.</p>
@@ -100,15 +102,19 @@ layout = 'single'
   </div>
 </div>
 
-<div class="vignette">
+<div class="vignette" id="solution">
   <scrolling-panel class="background">
     <figure>
-      <img src="/img/map-temporary.jpg" />
-      <figcaption>📍Algae bloom in the Caloosahatchee River near Labelle, Fla. in 2018  (Getty Images)</figcaption>
+      <video muted playsinline>
+        <source src="/video/altered-map.mp4" type="video/mp4">
+      </video>
+      <figcaption>Today, polluted water is discharged east and west, while insufficient water flows south through the Everglades.</figcaption>
     </figure>
     <figure>
-      <img src="/img/map-temporary.jpg" />
-      <figcaption>📍Algae bloom in the Caloosahatchee River near Labelle, Fla. in 2018  (Getty Images)</figcaption>
+      <video muted playsinline>
+        <source src="/video/restored-map.mp4" type="video/mp4">
+      </video>
+      <figcaption>Once the EAA Reservoir is completed in 2034, more water will move south — helping to restore Florida’s original flow of water.</figcaption>
     </figure>
   </scrolling-panel>
   <div class="panel">
@@ -143,7 +149,7 @@ layout = 'single'
     <figure>
       <img src="/img/resevoir.png" />
     </figure>
-    <div class="grid facts">
+    <div class="facts">
       <div class="fact">
         <h2>1</h2>
         <p>Water flows into the 10,500-acre EAA Reservoir from the northeast pumping stations.</p>
@@ -192,8 +198,10 @@ layout = 'single'
         <p>“The lake water is opaque and dark-colored,” says Dr. Steve Davis, chief science officer at the Everglades Foundation. “It looks like the chocolate drink Yoo-hoo mixed with Coca-Cola.” </p>
         <p>That’s where the STAs come in — artificial wetlands designed to clean the water before it reaches the Everglades for a final filter.</p>
         <p>Wetland plants are the clean-up crew. Cattails and bulrushes slow the water, allowing sediment to settle and absorbing excess nutrients. And under the water, even more aquatic plants and algae like muskgrass and native naiads filter out the pollutants. These plants, and the microbes around them, remove most of the phosphorus and sequester carbon, which is key to reducing carbon emissions. </p>
-        <p>“As the water enters the stormwater treatment areas, it gets gradually cleaner. At the other end, it’s almost crystal clear.</p>
-        <p>Dr. Steve Davis, Chief Science Officer at The Everglades Foundation</p>
+        <blockquote>
+          <p>“As the water enters the stormwater treatment areas, it gets gradually cleaner. At the other end, it’s almost crystal clear.</p>
+          <p class="cite">Dr. Steve Davis, Chief Science Officer at The Everglades Foundation</p>
+        </blockquote>
         <p>Biologists from the South Florida Water Management District (SFWMD) carefully plant and manage these wetlands. In spring 2025, they started planting the 6,500-acre STA next to the EAA Reservoir. In addition to the plants, this new ecosystem is already attracting wading birds and alligators. </p>
       </div>
       <aside>
@@ -207,7 +215,7 @@ layout = 'single'
   </div>
 </div>
 
-<div class="vignette">
+<div class="vignette" id="benefits">
   <video class="background" muted playsinline>
     <source src="/video/cleaner.mp4" type="video/mp4">
   </video>
@@ -295,8 +303,10 @@ layout = 'single'
       </div>
       <div class="content">
         <p>Florida Bay, a rich estuary of seagrasses, mangroves and reefs at the southern tip of the peninsula, serves as a top fishing destination and a winter refuge for tarpon. But without enough freshwater, Florida Bay’s salinity can be double that of seawater. When salt levels rise too high, seagrasses die, along with the fish and manatees that rely on them. The reservoir would ensure enough freshwater reaches Florida Bay.</p>
-        <p>“The EAA Reservoir is drought insurance for the Everglades and Florida Bay.”</p>
-        <p>Dr. Steve Davis, Chief Science Officer at The Everglades Foundation</p>
+        <blockquote>
+          <p>“The EAA Reservoir is drought insurance for the Everglades and Florida Bay.”</p>
+          <p class="cite">Dr. Steve Davis, Chief Science Officer at The Everglades Foundation</p>
+        </blockquote>
         <p>In 2016, one of the worst die-offs wiped out over 40,000 acres of seagrass. </p>
         <p>“Florida Bay was known for clear water,” says Andrews. “But all that dead grass rotted, releasing nitrogen and triggering horrible cycles of algae blooms and muddy water.” </p>
         <p>The murky conditions blocked sunlight, slowing seagrass regrowth. </p>
@@ -354,8 +364,10 @@ layout = 'single'
       <div class="content">
         <p>Construction of the EAA Reservoir began in 2021, but restoring a system as vast and interconnected as the Everglades takes time. The Comprehensive Everglades Restoration Plan (CERP) ranks among the largest ecosystem restoration efforts in the world, spanning millions of acres, impacting millions of people and requiring billions of dollars. The EAA Reservoir is one of its most significant projects.</p>
         <p>“It's not like you can just pull these things off a shelf at a home improvement store and install them,” says Bell. “It takes a lot of engineering, time and financial support from both federal and non-federal sponsors.”</p>
-        <p>“This long-planned project is finally fixing the problem by redirecting water south. But we can’t finish the job without this reservoir.”</p>
-        <p>Eric Eikenberg, CEO of the Everglades Foundation</p>
+        <blockquote>
+          <p>“This long-planned project is finally fixing the problem by redirecting water south. But we can’t finish the job without this reservoir.”</p>
+          <p class="cite">Eric Eikenberg, CEO of the Everglades Foundation</p>
+        </blockquote>
         <p>“We’ve been waiting 25 years for the EAA reservoir. Fish kills, job losses — crises like these have driven demand for change on both coasts,” says Eikenberg. “ Every year, we have to push Congress and the White House to fully fund Everglades restoration.” </p>
         <p>Bringing the reservoir online will happen in phases, Bell explains, with extensive modeling to evaluate how it affects the entire Lake Okeechobee system. The stakes are high — delays mean more algae blooms, worsening droughts and floods, plus further stress on the Biscayne Aquifer. </p>
         <p>In 2028, the Army Corps will begin drafting its next plan for managing lake flows with the reservoir in place — an opportunity, Bell emphasizes, for the public to shape the future of South Florida’s water.</p>
@@ -367,11 +379,11 @@ layout = 'single'
         </div>
         <div class="fact">
           <h2>2023</h2>
-          <p>Resevoir construction starts</p>
+          <p>Reservoir construction starts</p>
         </div>
         <div class="fact">
           <h2>2029</h2>
-          <p>Resevoir completes</p>
+          <p>Reservoir completes</p>
         </div>
         <div class="fact">
           <h2>2034</h2>
@@ -430,7 +442,30 @@ layout = 'single'
 <div class="about">
   <div class="info">
     <h1>About this story</h1>
-    <p>The Composition Collective partnered with The Everglades Foundation to produce this comprehensive look into the EAA Reservoir project for Florida communities and lawmakers.</p>
-    <p>Writing and reporting by Katie L. Burke. Animations and illustrations by Patrick Gleason.</p>
+    <p>Story produced by <a href="https://www.compositioncollective.com/">The Composition Collective</a> and <a href="https://www.evergladesfoundation.org/">The Everglades Foundation</a>.</p>
+    <p>Writing and reporting by Katie L. Burke.</p>
+    <p>Animations and illustrations by Patrick Gleason.</p>
+    <p>Photos and videos by The Everglades Foundation, The Composition Collective, Adobe Stock and Getty Images.</p>
+  </div>
+  <div class="resources">
+    <h2>MORE RESOURCES</h2>
+    <div class="facts">
+      <div class="fact">
+        <h4>THE EVERGLADES FOUNDATION</h4>
+        <p><a href="https://www.youtube.com/watch?v=yXQVOIaB5WU">8 things to know about the EAA Reservoir (Video)</a></p>
+      </div>
+      <div class="fact">
+        <h4>THIS WEEK IN FLORIDA LOCAL 10 NEWS</h4>
+        <p><a href="https://www.local10.com/this-week-in-south-florida/2023/03/05/this-week-in-south-florida-eric-eikenberg/?fbclid=IwAR1rUbzaBxU5hzKJ4odrp2AxOvYQHtVSjXsnhbFDDknGzHXkvHy35PGSFl0">Glenna Milberg’s interview with Eric Eikenberg</a></p>
+      </div>
+      <div class="fact">
+        <h4>TO THE POINT WPTV</h4>
+        <p><a href="https://www.wptv.com/news/political/to-the-point/everglades-foundation-ceo-optimistic-about-funding-to-help-complete-restoration?fbclid=IwAR1TeBNRCXLz_FRYdLsRlLn68wpVICr_NInhhk_cSI7AMWE7o1aQMS_xZXQ">Michael Williams interview with Eric Eikenberg</a></p>
+      </div>
+      <div class="fact">
+        <h4>THE EVERGLADES FOUNDATION</h4>
+        <p><a href="https://www.youtube.com/watch?v=mC_SWYNUqho">EAA Reservoir and STA Explained (Video)</a></p>
+      </div>
+    </div>
   </div>
 </div>
