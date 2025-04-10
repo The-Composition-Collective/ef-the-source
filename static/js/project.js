@@ -19,7 +19,7 @@ const animationObserver = new IntersectionObserver(entries => {
     entry.target.classList.toggle("show", entry.isIntersecting);
   });
 }, {
-  threshold: 0.2
+  threshold: 0.1
 });
 
 /*

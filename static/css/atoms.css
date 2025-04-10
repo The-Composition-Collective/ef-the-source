@@ -7,16 +7,29 @@
   --header-font: "Bebas Neue", sans-serif;
   --body-font: "Open Sans", sans-serif;
   --content-width: 1000px;
-  --space: 20px;
+  --space: 30px;
   --panel-background: rgba(0,0,0,0.8);
   --panel-fade: 150px;
   --background-color: black;
+  --vignette-height: 50vh;
 
   background-color: var(--background-color);
 }
 
 body {
   margin: 0;
+}
+
+@media(min-width: 768px) {
+  body {
+    --vignette-height: 70vh;
+  }
+}
+
+@media(min-width: 1024px) {
+  body {
+    --vignette-height: 100vh;
+  }
 }
 
 h1 {
@@ -36,7 +49,7 @@ h4 {
 }
 
 p {
-  font: 17px/1.5em var(--body-font);
+  font: 16px/1.5em var(--body-font);
 }
 
 a {
@@ -175,7 +188,7 @@ input, button {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: var(--vignette-height);
   object-fit: cover;
   object-position: center bottom;
 }
@@ -304,8 +317,10 @@ input, button {
   text-align: center;
 }
 
-.lead-intro {
-  margin: -275px auto 150px;
+@media(min-width: 1024px) {
+  .lead-intro {
+    margin: -275px auto 150px;
+  }
 }
 
 /*
@@ -399,7 +414,7 @@ input, button {
   display: flex;
   gap: var(--space);
   overflow-x: auto;
-  height: 100vh;
+  height: var(--vignette-height);
   scroll-snap-type: x mandatory;
 }
 
