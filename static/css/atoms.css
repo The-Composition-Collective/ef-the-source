@@ -313,9 +313,15 @@ input, button {
 }
 
 .intro p {
-  font: 600 23px/30px var(--body-font);
+  font: 600 20px/25px var(--body-font);
   margin: 0px auto;
   text-align: center;
+}
+
+@media(min-width: 768px) {
+  .intro p {
+    font: 600 23px/30px var(--body-font);
+  }
 }
 
 @media(min-width: 1024px) {
