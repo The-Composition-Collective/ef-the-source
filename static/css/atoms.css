@@ -217,6 +217,7 @@ input, button {
   top: calc(var(--panel-fade) * -1);
   left: 0;
   background: linear-gradient(to bottom, transparent, var(--panel-background) 90%);
+  pointer-events: none;
 }
 
 .panel > * {
