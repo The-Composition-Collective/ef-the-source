@@ -6,7 +6,7 @@
 :root {
   --header-font: "Bebas Neue", sans-serif;
   --body-font: "Open Sans", sans-serif;
-  --content-width: 1240px;
+  --content-width: 1000px;
   --space: 20px;
   --panel-background: rgba(0,0,0,0.8);
   --panel-fade: 150px;
@@ -192,6 +192,7 @@ input, button {
   color: white;
   background-color: var(--panel-background);
   backdrop-filter: blur(5px);
+  will-change: transform;
 }
 
 .panel:before {
@@ -235,7 +236,6 @@ input, button {
   flex-direction: column;
   gap: 1em;
   margin: 0 auto;
-  --content-width: 950px;
 }
 
 /*
@@ -253,16 +253,16 @@ input, button {
   margin: 0 auto;
 }
 
-.grid > * {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .4s ease, transform .2s ease;
-}
+/* .grid > * { */
+/*   opacity: 0; */
+/*   transform: translateY(20px); */
+/*   transition: opacity .4s ease, transform .2s ease; */
+/* } */
 
-.grid.show > * {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* .grid.show > * { */
+/*   opacity: 1; */
+/*   transform: translateY(0); */
+/* } */
 
 
 @media(min-width: 768px) {
@@ -272,7 +272,7 @@ input, button {
       "intro intro"
       "content aside"
       ". ."
-      "caption caption"
+      "caption caption";
   }
 }
 
@@ -321,7 +321,6 @@ input, button {
   margin-top: 0;
 }
 
-
 /*
  * Aside
  */
@@ -357,7 +356,7 @@ input, button {
 .caption {
   font: 700 14px/17px var(--body-font);
   grid-area: caption;
-  margin-top: var(--space);
+  grid-column: 1/-1;
 }
 
 .caption:before {
@@ -368,7 +367,6 @@ input, button {
   background-color: white;
   margin-bottom: 12px;
 }
-
 
 /*
  * Facts
@@ -394,16 +392,29 @@ input, button {
 }
 
 /*
- * Scrolling Panels
+ * Strips
  */
 
-scrolling-panel figure {
-  position: relative;
+.strip {
   display: flex;
+  gap: var(--space);
+  overflow-x: auto;
+  height: 100vh;
+  scroll-snap-type: x mandatory;
 }
 
-scrolling-panel figure img,
-scrolling-panel figure video {
+.strip > figure {
+  position: relative;
+  display: flex;
+  align-self: start;
+  flex-shrink: 0;
+  width: 90%;
+  height: 100%;
+  scroll-snap-align: start;
+}
+
+.strip figure img,
+.strip figure video {
   position: absolute;
   top: 0;
   left: 0;
@@ -412,7 +423,7 @@ scrolling-panel figure video {
   object-fit: cover;
 }
 
-scrolling-panel figure figcaption {
+.strip figure figcaption {
   position: relative;
   align-self: end;
   background: var(--panel-background);
@@ -422,7 +433,7 @@ scrolling-panel figure figcaption {
   box-sizing: border-box;
 }
 
-scrolling-panel figure figcaption:before {
+.strip figure figcaption:before {
   content: "";
   display: block;
   width: 100px;
@@ -432,11 +443,27 @@ scrolling-panel figure figcaption:before {
 }
 
 /*
+ * Animations
+ */
+
+.animate-group > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .3s ease;
+}
+
+.animate-group.show > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
  * Other 
  */
 
 .about {
   display: grid;
+  align-content: space-around;
   padding: var(--space);
   min-height: 100vh;
   color: white;
@@ -446,7 +473,6 @@ scrolling-panel figure figcaption:before {
   max-width: 475px;
   margin: 0 auto;
   text-align: center;
-  align-self: center;
 }
 
 .info h1 {
@@ -459,8 +485,6 @@ scrolling-panel figure figcaption:before {
 }
 
 .about .resources {
-  align-self: end;
   max-width: var(--content-width);
   margin: 0 auto;
 }
-

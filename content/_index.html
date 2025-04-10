@@ -16,7 +16,7 @@ layout = 'single'
         <img class="down-arrow" src="/img/down.svg">
       </div>
       <p>From the mural-lined streets of Miami to the shell-strewn beaches of Sanibel Island, from the expanse of Lake Okeechobee to the coral cays of the Florida Keys, South Florida is bound together by water. The Kissimmee River carried rain into Lake Okeechobee for millennia, feeding the Everglades and the coastlines beyond. Yet decades of infrastructure development cut off that natural flow southward, harming Florida’s ecosystem, economy and water supply. Over the past 25 years, federal, state, tribal and local governments have worked to reverse the damage, fighting against the tide of population growth and environmental change. The largest missing piece of the puzzle is now under construction: the EAA Reservoir.</p>
-      <audio src="https://s3.amazonaws.com/citizen-dj-assets.labs.loc.gov/audio/items/loc-fma/fma-184032.mp3" controls crossorigin="anonymous"></audio>
+      <audio src="/audio/conversations.mp3" controls crossorigin="anonymous"></audio>
     <p class="caption">📍The EAA Reservoir site in 2023. </p>
     </div>
   </div>
@@ -25,7 +25,7 @@ layout = 'single'
 <div class="vignette" id="problem">
   <img class="background" src="/img/flood.jpg">
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Problem</span>
         <h1>Hurricanes, Fires and Floods</h1>
@@ -55,18 +55,18 @@ layout = 'single'
 </div>
 
 <div class="vignette">
-  <scrolling-panel class="background">
-    <figure>
-      <img src="/img/crisis-1.jpg" />
-      <figcaption>📍Harmful discharges from Lake Okeechobee can cause toxic algae blooms, like this 2018 outbreak in the Caloosahatchee River near Labelle, Florida.Tax burden reduction for an average Floridian because of water-based tourism.</figcaption>
-    </figure>
-    <figure>
-      <img src="/img/crisis-2.jpg" />
-      <figcaption>📍Noxious algae blooms, including red tide and toxic blue-green algae, can cause respiratory symptoms and kill wildlife. The 2018 outbreak left beaches, like Fort Myers Beach, littered with dead fish.</figcaption>
-    </figure>
-  </scrolling-panel>
+  <div class="background">
+    <div class="strip">
+      <figure>
+        <img src="/img/crisis-1.jpg" />
+      </figure>
+      <figure>
+        <img src="/img/crisis-2.jpg" />
+      </figure>
+    </div>
+  </div>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Problem</span>
         <h1>The Current Crisis</h1>
@@ -98,27 +98,31 @@ layout = 'single'
           <p>Tax burden reduction for an average Floridian because of water-based tourism.</p>
         </div>
       </aside>
+      <div class="caption">
+        <p>📍Harmful discharges from Lake Okeechobee can cause toxic algae blooms, like this 2018 outbreak in the Caloosahatchee River near Labelle, Florida.Tax burden reduction for an average Floridian because of water-based tourism.</p>
+        <p>📍Noxious algae blooms, including red tide and toxic blue-green algae, can cause respiratory symptoms and kill wildlife. The 2018 outbreak left beaches, like Fort Myers Beach, littered with dead fish.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="vignette" id="solution">
-  <scrolling-panel class="background">
-    <figure>
-      <video muted playsinline>
-        <source src="/video/altered-map.mp4" type="video/mp4">
-      </video>
-      <figcaption>Today, polluted water is discharged east and west, while insufficient water flows south through the Everglades.</figcaption>
-    </figure>
-    <figure>
-      <video muted playsinline>
-        <source src="/video/restored-map.mp4" type="video/mp4">
-      </video>
-      <figcaption>Once the EAA Reservoir is completed in 2034, more water will move south — helping to restore Florida’s original flow of water.</figcaption>
-    </figure>
-  </scrolling-panel>
+  <div class="background">
+    <div class="strip">
+      <figure>
+        <video muted playsinline>
+          <source src="/video/altered-map.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <figure>
+        <video muted playsinline>
+          <source src="/video/restored-map.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </div>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Solution</span>
         <h1>Water in Reserve</h1>
@@ -141,6 +145,10 @@ layout = 'single'
           <p>Together, the reservoir and STA span 17,000 acres — an area larger than 150 Disney Magic Kingdoms combined.</p>
         </div>
       </aside>
+      <div class="caption">
+        <p>📍Today, polluted water is discharged east and west, while insufficient water flows south through the Everglades.</p>
+        <p>📍Once the EAA Reservoir is completed in 2034, more water will move south — helping to restore Florida’s original flow of water.</p>
+      </div>
     </div>
     <video class="full-bleed" muted playsinline>
       <source src="/video/map-3d-horizontal.mp4" type="video/mp4" media="(orientation: landscape)">
@@ -149,7 +157,7 @@ layout = 'single'
     <figure>
       <img src="/img/resevoir.png" />
     </figure>
-    <div class="facts">
+    <div class="facts animate-group" style="margin: 3rem auto;">
       <div class="fact">
         <h2>1</h2>
         <p>Water flows into the 10,500-acre EAA Reservoir from the northeast pumping stations.</p>
@@ -175,18 +183,18 @@ layout = 'single'
 </div>
 
 <div class="vignette">
-  <scrolling-panel class="background">
-    <figure>
-      <img src="/img/power-1.jpg" />
-      <figcaption>📍Sugarcane fields burning north of the EAA Reservoir site. Phosphorus, a key fertilizer ingredient used in sugar farming, is the main water pollutant.</figcaption>
-    </figure>
-    <figure>
-      <img src="/img/power-2.jpg" />
-      <figcaption>📍Plants in the 6,500-acre stormwater treatment area (STA), which is adjacent to the EAA Reservoir, will filter out phosphorus before water is released south into the Everglades.</figcaption>
-    </figure>
-  </scrolling-panel>
+  <div class="background">
+    <div class="strip">
+      <figure>
+        <img src="/img/power-1.jpg" />
+      </figure>
+      <figure>
+        <img src="/img/power-2.jpg" />
+      </figure>
+    </div>
+  </div>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Solution</span>
         <h1>The Power of Plants</h1>
@@ -211,6 +219,10 @@ layout = 'single'
           <p>The phosphorus limit that water flowing south must meet to protect the Everglades.</p>
         </div>
       </aside>
+      <div class="caption">
+        <p>📍Sugarcane fields burning north of the EAA Reservoir site. Phosphorus, a key fertilizer ingredient used in sugar farming, is the main water pollutant.</p>
+        <p>📍Plants in the 6,500-acre stormwater treatment area (STA), which is adjacent to the EAA Reservoir, will filter out phosphorus before water is released south into the Everglades.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -220,7 +232,7 @@ layout = 'single'
     <source src="/video/cleaner.mp4" type="video/mp4">
   </video>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Benefits</span>
         <h1>Cleaner coasts</h1>
@@ -251,22 +263,23 @@ layout = 'single'
 </div>
 
 <div class="vignette">
-  <scrolling-panel class="background">
-    <figure>
-      <img src="/img/grass-1.jpg">
-      <figcaption>📍The Everglades is one of the largest wetland ecosystems in the world, filled with biodiversity, including sawgrass marshes, cypress swamps and mangrove forests.</figcaption>
-    </figure>
-    <figure>
-      <img src="/img/grass-2.jpg">
-      <figcaption>📍Alligators, “the architects of the Everglades,” use tree islands for nesting sites and create “alligator holes” — deep pockets of water essential for other wildlife in the dry season.</figcaption>
-    </figure>
-    <figure>
-      <img src="/img/grass-3.jpg">
-      <figcaption>📍A tree island rises above the marsh in the Everglades. The EAA Reservoir will improve the conditions of tree islands.</figcaption>
-    </figure>
-  </scrolling-panel>
+  <div class="background">
+    <div class="strip">
+      <figure>
+        <video muted playsinline>
+          <source src="/video/grass-1.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <figure>
+        <img src="/img/grass-2.jpg">
+      </figure>
+      <figure>
+        <img src="/img/grass-3.jpg">
+      </figure>
+    </div>
+  </div>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Benefits</span>
         <h1>Restoring the River of Grass</h1>
@@ -286,6 +299,11 @@ layout = 'single'
           <img src="/img/everglades-wayfinding.png">
         </div>
       </aside>
+      <div class="caption">
+        <p>📍The Everglades is one of the largest wetland ecosystems in the world, filled with biodiversity, including sawgrass marshes, cypress swamps and mangrove forests.</p>
+        <p>📍Alligators, “the architects of the Everglades,” use tree islands for nesting sites and create “alligator holes” — deep pockets of water essential for other wildlife in the dry season.</p>
+        <p>📍A tree island rises above the marsh in the Everglades. The EAA Reservoir will improve the conditions of tree islands.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -295,7 +313,7 @@ layout = 'single'
     <source src="/video/protecting.mp4" type="video/mp4">
   </video>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Benefits</span>
         <h1>Protecting Florida Bay</h1>
@@ -328,7 +346,7 @@ layout = 'single'
     <source src="/video/restoration.mp4" type="video/mp4">
   </video>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Benefits</span>
         <h1>Recreation and restoration</h1>
@@ -355,7 +373,7 @@ layout = 'single'
     <source src="/video/future.mp4" type="video/mp4">
   </video>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Future</span>
         <h1>Building the Future</h1>
@@ -396,22 +414,22 @@ layout = 'single'
 </div>
 
 <div class="vignette">
-  <scrolling-panel class="background">
-    <figure>
-      <video muted playsinline>
-        <source src="/video/flow-1.mp4" type="video/mp4">
-      </video>
-      <figcaption>📍Florida life is bound by water. Reducing harmful discharges from Lake Okeechobee will help protect the water-based economies of cities like Stuart, Florida.</figcaption>
-    </figure>
-    <figure>
-      <video muted playsinline>
-        <source src="/video/flow-2.mp4" type="video/mp4">
-      </video>
-      <figcaption>📍South Floridians consume 3 billion gallons of water each day — enough water to fill almost 5,000 Olympic size swimming pools or make billions of cafés con leche.</figcaption>
-    </figure>
-  </scrolling-panel>
+  <div class="background">
+    <div class="strip">
+      <figure>
+        <video muted playsinline>
+          <source src="/video/flow-1.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <figure>
+        <video muted playsinline>
+          <source src="/video/flow-2.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </div>
+  </div>
   <div class="panel">
-    <div class="grid">
+    <div class="grid animate-group">
       <div class="intro">
         <span class="category">Future</span>
         <h1>Going with the flow</h1>
@@ -435,6 +453,10 @@ layout = 'single'
           <p>Amount that Florida’s water-based tourism economy contributes in state, local and federal taxes.</p>
         </div>
       </aside>
+      <div class="caption">
+        <p>📍Florida life is bound by water. Reducing harmful discharges from Lake Okeechobee will help protect the water-based economies of cities like Stuart, Florida.</p>
+        <p>📍South Floridians consume 3 billion gallons of water each day — enough water to fill almost 5,000 Olympic size swimming pools or make billions of cafés con leche.</p>
+      </div>
     </div>
   </div>
 </div>

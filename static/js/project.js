@@ -14,7 +14,7 @@ const videoObserver = new IntersectionObserver(entries => {
   threshold: 0.5
 });
 
-const gridObserver = new IntersectionObserver(entries => {
+const animationObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     entry.target.classList.toggle("show", entry.isIntersecting);
   });
@@ -34,6 +34,13 @@ document.querySelectorAll("video").forEach(ele => {
  * Facts
  */
 
-document.querySelectorAll(".grid").forEach(ele => {
-  gridObserver.observe(ele);
+document.querySelectorAll(".animate-group").forEach(ele => {
+  let delay = 0.6;
+  let children = Array.from(ele.children);
+
+  children.forEach((item, index) => {
+    item.style.transitionDelay = `${delay * index}s`;
+  });
+
+  animationObserver.observe(ele);
 });
