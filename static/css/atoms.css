@@ -8,8 +8,8 @@
   --body-font: "Open Sans", sans-serif;
   --content-width: 1000px;
   --space: 30px;
-  --panel-background: rgba(0,0,0,0.9);
-  --panel-fade: 100px;
+  --gap: 50px;
+  --panel-background: rgba(0,0,0,0.8);
   --background-color: black;
   --vignette-height: 50vh;
 
@@ -85,6 +85,7 @@ footer {
 }
 
 blockquote {
+  margin: 3rem 0;
   border-left: 2px solid white;
   padding-left: var(--space);
   box-sizing: border-box;
@@ -98,6 +99,12 @@ blockquote p {
 blockquote .cite {
   font: 400 17px/44px var(--body-font);
   margin-top: 10px;
+}
+
+audio {
+  display: block;
+  width: revert;
+  margin: 1rem 0;
 }
 
 /*
@@ -175,13 +182,16 @@ input, button {
 }
 
 /*
- * Vignettes
+ * Sections
  */
 
+section, 
 .vignette {
   position: relative;
+  display: flow-root;
 }
 
+section > .background, 
 .vignette > .background {
   display: block;
   position: sticky;
@@ -193,52 +203,16 @@ input, button {
   object-position: center bottom;
 }
 
-/*
- * Panels
- */
+.full-bleed {
+  display: block;
+  width: 100vw;
+}
 
-.panel {
-  position: relative;
-  padding: var(--space);
-  margin-top: var(--top);
-  box-sizing: border-box;
+.shade {
   color: white;
+  padding: var(--space);
   background-color: var(--panel-background);
   backdrop-filter: blur(5px);
-  will-change: transform;
-}
-
-.panel:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100vw;
-  height: var(--panel-fade);
-  top: calc(var(--panel-fade) * -1);
-  left: 0;
-  background: linear-gradient(to bottom, transparent, var(--panel-background) 90%);
-  pointer-events: none;
-}
-
-.panel > * {
-  display: block;
-  margin: 0 auto;
-  width: min(var(--content-width), 100%);
-}
-
-.panel .full-bleed {
-  width: 100vw;
-  margin-left: calc(var(--space) * -1);
-}
-
-.panel blockquote,
-.panel figure {
-  margin: 3rem auto;
-}
-
-.panel audio {
-  width: revert;
-  margin-left: 0;
 }
 
 /*
@@ -246,10 +220,15 @@ input, button {
  */
 
 .column {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+    "intro"
+    "content"
+    "caption";
+  gap: var(--gap);
+  margin: var(--space) auto;
+  max-width: var(--content-width);
+  box-sizing: border-box;
 }
 
 /*
@@ -263,21 +242,11 @@ input, button {
     "content"
     "aside"
     "caption";
-  gap: 40px 140px; 
-  margin: 0 auto;
+  gap: var(--gap) 140px; 
+  padding: var(--space);
+  margin: var(--space) auto;
+  max-width: var(--content-width);
 }
-
-/* .grid > * { */
-/*   opacity: 0; */
-/*   transform: translateY(20px); */
-/*   transition: opacity .4s ease, transform .2s ease; */
-/* } */
-
-/* .grid.show > * { */
-/*   opacity: 1; */
-/*   transform: translateY(0); */
-/* } */
-
 
 @media(min-width: 768px) {
   .grid {
@@ -285,8 +254,8 @@ input, button {
     grid-template-areas: 
       "intro intro"
       "content aside"
+      "caption aside";
       ". ."
-      "caption caption";
   }
 }
 
@@ -295,8 +264,16 @@ input, button {
  */
 
 .intro {
-  text-align: center;
   grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) / 2);
+  text-align: center;
+}
+
+.intro > * {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .intro .category {
@@ -308,14 +285,8 @@ input, button {
   display: block;
 }
 
-.intro h1 {
-  margin: calc(var(--space) / 2) 0;
-}
-
 .intro p {
   font: 600 20px/25px var(--body-font);
-  margin: 0px auto;
-  text-align: center;
 }
 
 @media(min-width: 768px) {
@@ -324,17 +295,12 @@ input, button {
   }
 }
 
-@media(min-width: 1024px) {
-  .lead-intro {
-    margin: -275px auto 150px;
-  }
-}
-
 /*
  * Content
  */
 
 .content {
+  position: relative;
   grid-area: content;
   transition-delay: 0.5s;
 }
@@ -378,7 +344,6 @@ input, button {
 .caption {
   font: 700 14px/17px var(--body-font);
   grid-area: caption;
-  grid-column: 1/-1;
 }
 
 .caption:before {
