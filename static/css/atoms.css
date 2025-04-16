@@ -185,14 +185,12 @@ input, button {
  * Sections
  */
 
-section, 
-.vignette {
+section {
   position: relative;
   display: flow-root;
 }
 
-section > .background, 
-.vignette > .background {
+section > .background {
   display: block;
   position: sticky;
   top: 0;
@@ -226,9 +224,15 @@ section > .background,
     "content"
     "caption";
   gap: var(--gap);
-  margin: var(--space) auto;
+  margin: 0 auto;
   max-width: var(--content-width);
   box-sizing: border-box;
+}
+
+@media(min-width: 1024px) {
+  .column {
+    margin: var(--space) auto;
+  }
 }
 
 /*
@@ -244,7 +248,7 @@ section > .background,
     "caption";
   gap: var(--gap) 140px; 
   padding: var(--space);
-  margin: var(--space) auto;
+  margin: 0 auto;
   max-width: var(--content-width);
 }
 
@@ -256,6 +260,12 @@ section > .background,
       "content aside"
       "caption aside";
       ". ."
+  }
+}
+
+@media(min-width: 1024px) {
+  .grid {
+    margin: var(--space) auto;
   }
 }
 
