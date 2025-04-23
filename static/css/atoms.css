@@ -97,8 +97,8 @@ blockquote p {
 }
 
 blockquote .cite {
-  font: 400 17px/44px var(--body-font);
-  margin-top: 10px;
+  font: 400 17px/22px var(--body-font);
+  margin-top: 20px;
 }
 
 audio {
