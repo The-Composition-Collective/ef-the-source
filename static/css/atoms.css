@@ -201,6 +201,10 @@ section > .background {
   object-position: center bottom;
 }
 
+.tall {
+  --vignette-height: 100vh;
+}
+
 .full-bleed {
   display: block;
   width: 100vw;
@@ -232,6 +236,10 @@ section > .background {
 @media(min-width: 1024px) {
   .column {
     margin: var(--space) auto;
+  }
+
+  .lead-panel {
+    margin-top: -25vh;
   }
 }
 
@@ -319,6 +327,11 @@ section > .background {
   margin-top: 0;
 }
 
+.content.sticky {
+  position: sticky;
+  top: 0;
+}
+
 /*
  * Aside
  */
@@ -327,7 +340,6 @@ section > .background {
   display: flex;
   flex-direction: column;
   gap: calc(var(--space) * 2);
-  align-items: start;
   grid-area: aside;
   transition-delay: 1s;
 }
@@ -354,6 +366,11 @@ section > .background {
 .caption {
   font: 700 14px/17px var(--body-font);
   grid-area: caption;
+  align-self: end;
+}
+
+.caption > p {
+  font: 700 14px/17px var(--body-font);
 }
 
 .caption:before {
@@ -398,6 +415,12 @@ section > .background {
   overflow-x: auto;
   height: var(--vignette-height);
   scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+}
+
+.strip::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 0;
 }
 
 .strip > figure {

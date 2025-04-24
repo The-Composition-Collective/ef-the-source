@@ -48,7 +48,7 @@ document.querySelectorAll(".animate-group").forEach(ele => {
 const stripObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting) {
-      entry.target.intervalId = setInterval(next.bind(entry.target), 5000);
+      entry.target.intervalId = setInterval(next.bind(entry.target), 3000);
     } else {
       clearInterval(entry.target.intervalId);
     }
@@ -62,11 +62,10 @@ document.querySelectorAll(".strip").forEach(ele => {
 });
 
 function next() {
-  const current = Array.from(this.children).find(ele => {
+  const next = Array.from(this.children).find(ele => {
     const bbox = ele.getBoundingClientRect();
-    return bbox.left >= 0 && bbox.right <= window.innerWidth;
+    return bbox.left > 0 && bbox.left < window.innerWidth;
   });
 
-  const next = current.nextElementSibling;
   next?.scrollIntoView({ behavior: "smooth" });
 }
