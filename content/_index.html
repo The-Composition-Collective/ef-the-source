@@ -4,8 +4,8 @@
   "layout": "single"
 }
 
-<section id="background">
-  <video class="background" muted playsinline>
+<section>
+  <video class="background" muted playsinline aria-label="Aerial footage of water and wetland in the EAA Reservoir site in 2023">
     <source src="./video/opener.mp4" type="video/mp4">
   </video>
   <div class="column shade">
@@ -22,7 +22,7 @@
 </section>
 
 <section id="problem">
-  <img class="background" src="./img/flood.jpg">
+  <img class="background" src="./img/flood.jpg" alt="Sepia toned photo showing destroyed buildings from the Okeechobee hurricane.  Thousands of people drowned in floods when the storm’s surge overwhelmed Lake Okeechobee’s levees">
   <div class="grid shade animate-group">
     <div class="intro">
       <span class="category">Problem</span>
@@ -55,10 +55,10 @@
   <div class="background">
     <div class="strip">
       <figure>
-        <img src="./img/crisis-1.jpg" />
+        <img src="./img/crisis-1.jpg" alt="Boat cutting through the water on the Caloosahatchee River. Water is green from toxic algae blooms." />
       </figure>
       <figure>
-        <img src="./img/crisis-2.jpg" />
+        <img src="./img/crisis-2.jpg" alt="Dead fish on Fort Myers beach, caused by 2018 harmful algae bloom outbreaks" />
       </figure>
     </div>
   </div>
@@ -102,20 +102,10 @@
 </section>
 
 <section id="solution">
-  <div class="background">
-    <div class="strip">
-      <figure>
-        <video muted playsinline>
-          <source src="./video/altered-map.mp4" type="video/mp4">
-        </video>
-      </figure>
-      <figure>
-        <video muted playsinline>
-          <source src="./video/restored-map.mp4" type="video/mp4">
-        </video>
-      </figure>
-    </div>
-  </div>
+  <video class="background" muted playsinline aria-label="Three part video that shows the current, under-construction and future path of water on a satellite map of Florida.">
+    <source src="./video/maps-desktop.mp4" type="video/mp4" media="(orientation: landscape)">
+    <source src="./video/maps-mobile.mp4" type="video/mp4" media="(orientation: portrait)">
+  </video>
   <div class="grid shade animate-group">
     <div class="intro">
       <span class="category">Solution</span>
@@ -127,7 +117,7 @@
       <p>Instead of sending polluted, excess Lake Okeechobee water east and west, the U.S. Army Corps of Engineers will direct water from Lake Okeechobee into the reservoir, where it will be stored until the dry season. Water is then released into the adjacent stormwater treatment area (STA), an artificial wetland that cleans the water before sending it south through the Everglades.</p>
       <blockquote>
         <p>“Lake Okeechobee is the heart of the system. EAA and the reservoirs north, south, east, and west of Lake Okeechobee move excess water during hurricanes and major rain events out of the lake and store it.”</p>
-        <p class="cite">Major Cory Bell,  Deputy District Commander for South Florida, U.S. Army Corp of Engineers</p>
+        <p class="cite">Major Cory Bell, Deputy District Commander for South Florida, U.S. Army Corp of Engineers</p>
       </blockquote>
       <p>The EAA Reservoir, which will look like a massive “above-ground-pool,” can store at least 10 times more water than other reservoirs — enough to lower Lake Okeechobee by a half foot and give Everglades restoration a massive boost. The EAA Reservoir can double the amount of freshwater sent into the Everglades. </p>
       <p>The U.S. Army Corps of Engineers is overseeing the EAA Reservoir build, working with the state’s South Florida Water Management District, Seminole and Miccosukee governments and local communities.</p>
@@ -141,45 +131,50 @@
     </aside>
     <div class="caption">
       <p>📍Illustrative rendering based on reservoir and STA diagrams from the Army Corp of Engineers.</p>
-      <!-- <p>📍Today, polluted water is discharged east and west, while insufficient water flows south through the Everglades.</p> -->
-      <!-- <p>📍Once the EAA Reservoir is completed in 2034, more water will move south — helping to restore Florida’s original flow of water.</p> -->
     </div>
   </div>
 </section>
 
 <section>
-  <video class="full-bleed" muted playsinline>
+  <video class="full-bleed" muted playsinline aria-label="Video animation that shows the EAA Reservoir on a real satellite map of Florida. Water flows in and out of the reservoir through canals.">
     <source src="./video/map-3d-horizontal.mp4" type="video/mp4" media="(orientation: landscape)">
     <source src="./video/map-3d-vertical.mp4" type="video/mp4" media="(orientation: portrait)">
   </video>
 
-  <div class="shade">
-    <div class="column">
+  <div class="grid shade">
+    <div class="content">
       <figure>
-        <img src="./img/resevoir.png" />
+        <img src="./img/resevoir.png" alt="Graphic rendering of the EAA Reservoir and adjacent stormwater treatment area." />
       </figure>
-      <div class="facts animate-group">
-        <div class="fact">
-          <h2>1</h2>
-          <p>Water flows into the 10,500-acre EAA Reservoir from the northeast pumping stations.</p>
-        </div>
-        <div class="fact">
-          <h2>2</h2>
-          <p>The earthen embankment walls surrounding the reservoir are 37-feet high, roughly the height of a 4-story building.</p>
-        </div>
-        <div class="fact">
-          <h2>3</h2>
-          <p>Pumping stations release water from the reservoir into the 6,500-acre STA.</p>
-        </div>
-        <div class="fact">
-          <h2>4</h2>
-          <p>Plants in the STA remove pollutants. Depending on the season, the STA will look like a shallow lake or a grassy wetland.</p>
-        </div>
-        <div class="fact">
-          <h2>5</h2>
-          <p>The spillway pumps water from the STA south into the Everglades and eventually into the Biscayne Aquifer.</p>
-        </div>
+    </div>
+    <aside class="animate-group">
+      <div class="fact">
+        <h2>1</h2>
+        <p>Water flows into the 10,500-acre EAA Reservoir from the northeast pumping stations.</p>
       </div>
+      <div class="fact">
+        <h2>2</h2>
+        <p>The earthen embankment walls surrounding the reservoir are 37-feet high, roughly the height of a 4-story building. The water inside the reservoir will be roughly 23 feet deep.</p>
+      </div>
+      <div class="fact">
+        <h2>3</h2>
+        <p>Gated culverts release water from the reservoir into the 6,500-acre STA.</p>
+      </div>
+      <div class="fact">
+        <h2>4</h2>
+        <p>Plants in the STA remove pollutants. Depending on the season, the STA will look like a shallow lake or a grassy wetland — perfect for birding, hiking and more.</p>
+      </div>
+      <div class="fact">
+        <h2>5</h2>
+        <p>A pumping station releases water from the STA south into the Everglades when it’s most needed.</p>
+      </div>
+      <div class="fact">
+        <h2>6</h2>
+        <p>The EAA Reservoir and STA cover an area slightly larger than the island of Manhattan.</p>
+      </div>
+    </aside>
+    <div class="caption">
+      <p>📍Simplified, illustrative 2D and 3D renderings based on EAA Reservoir and STA diagrams from the U.S. Army Corp of Engineers.</p>
     </div>
   </div>
 </section>
@@ -188,10 +183,10 @@
   <div class="background">
     <div class="strip">
       <figure>
-        <img src="./img/power-1.jpg" />
+        <img src="./img/power-1.jpg" alt="Sugarcane fields burning north of the EAA Reservoir site and sending black smoke into the air. Phosphorus, a key fertilizer ingredient used in sugar farming, is the main water pollutant." />
       </figure>
       <figure>
-        <img src="./img/power-2.jpg" />
+        <img src="./img/power-2.jpg" alt="Image showing the edge of the storm water treatment area adjacent to the EAA Reservoir, which filters out phosphorus before water is released south into the Everglades." />
       </figure>
     </div>
   </div>
@@ -228,7 +223,7 @@
 </section>
 
 <section id="benefits">
-  <video class="background" muted playsinline>
+  <video class="background" muted playsinline aria-label="Video showing beachfront real estate in Naples (Collier County). Harmful algae outbreaks have long-lasting effects on tourism and property values along the coasts.">
     <source src="./video/cleaner.mp4" type="video/mp4">
   </video>
   <div class="grid shade animate-group">
@@ -247,12 +242,12 @@
         <p>“Looking at all the components of the Everglades Restoration plan, the EAA Reservoir will have the single biggest impact as far as discharge reduction.”</p>
         <p class="cite">Captain Daniel Andrews, co-founder of Captains for Clean Water</p>
       </blockquote>
-      <p>The 2018 outbreak alone cost Florida’s tourism sector $184 million, according to a 2022 <a href="https://fred.ifas.ufl.edu/media/fredifasufledu/economic-impact-analysis/reports/FRE_WCIND_SWFMIA_Harmful_Algal_Bloom_Report_2018.pdf">University of Florida study</a>. Algae blooms won’t disappear entirely. Red tide and blue-green algae outbreaks have multiple causes, including natural ones like calm seas and sunlight. However, the EAA Reservoir will decrease the frequency and severity of the outbreaks.</p>
+      <p>The 2017-2019 outbreaks alone cost Florida’s tourism sector $184 million, according to a 2022 <a href="https://fred.ifas.ufl.edu/media/fredifasufledu/economic-impact-analysis/reports/FRE_WCIND_SWFMIA_Harmful_Algal_Bloom_Report_2018.pdf">University of Florida study</a>. Algae blooms won’t disappear entirely. Red tide and blue-green algae outbreaks have multiple causes, including natural ones like calm seas and sunlight. However, the EAA Reservoir will decrease the frequency and severity of the outbreaks.</p>
     </div>
     <aside>
       <div class="fact">
-        <h2>$17.8 billion</h2>
-        <p><a href="https://sccf.org/economic-impact-water-quality/">Projected loss to coastal</a> (Charlotte, Lee and Collier County) property values with another major toxic algae bloom outbreak.</p>
+        <h2>$184 million</h2>
+        <p><a hfef="https://fred.ifas.ufl.edu/media/fredifasufledu/economic-impact-analysis/reports/FRE_WCIND_SWFMIA_Harmful_Algal_Bloom_Report_2018.pdf".>Cost</a> of 2017-2019 harmful algae bloom outbreaks to Florida’s coastal tourism economy.</p>
         <img src="./img/coastal-wayfinding.png">
       </div>
     </aside>
@@ -264,15 +259,15 @@
   <div class="background">
     <div class="strip">
       <figure>
-        <video muted playsinline>
+        <video muted playsinline aria-label="Video moving through water in the Everglades. The Everglades is one of the largest wetland ecosystems in the world, filled with biodiversity, including sawgrass marshes, cypress swamps and mangrove forests.">
           <source src="./video/grass-1.mp4" type="video/mp4">
         </video>
       </figure>
       <figure>
-        <img src="./img/grass-2.jpg">
+        <img src="./img/grass-2.jpg" alt="An alligator in the Everglades. The alligator is partially submerged in water, with eyes and snout showing. Alligators, “the architects of the Everglades,” use tree islands for nesting sites and create “alligator holes” — deep pockets of water essential for other wildlife in the dry season.">
       </figure>
       <figure>
-        <img src="./img/grass-3.jpg">
+        <img src="./img/grass-3.jpg" alt="A tree island rises above the marsh in the Everglades. The EAA Reservoir will improve the conditions of tree islands.">
       </figure>
     </div>
   </div>
@@ -305,7 +300,7 @@
 </section>
 
 <section>
-  <video class="background" muted playsinline>
+  <video class="background" muted playsinline aria-label="Healthy sea grass subtly sways under water in the Florida Bay. ">
     <source src="./video/protecting.mp4" type="video/mp4">
   </video>
   <div class="grid shade animate-group">
@@ -333,10 +328,11 @@
       </div>
     </aside>
   </div>
+  <div class="caption">📍Healthy sea grass in Florida Bay</div>
 </section>
 
 <section>
-  <video class="background" muted playsinline>
+  <video class="background" muted playsinline aria-label="STA adjacent to the EAA Reservoir. A group of birds fly over and land on wetlands.">
     <source src="./video/restoration.mp4" type="video/mp4">
   </video>
   <div class="grid shade animate-group">
@@ -358,10 +354,11 @@
       </div>
     </aside>
   </div>
+  <div class="caption">📍STA adjacent to the EAA Reservoir.</div>
 </section>
 
-<section>
-  <video class="background" muted playsinline>
+<section id="future">
+  <video class="background" muted playsinline aria-label="Aerial footage showing construction on the EAA reservoir site in 2021.">
     <source src="./video/future.mp4" type="video/mp4">
   </video>
   <div class="grid shade animate-group">
@@ -407,12 +404,12 @@
   <div class="background">
     <div class="strip">
       <figure>
-        <video muted playsinline>
+        <video muted playsinline aria-label="Aerial footage showing a boat on the coast of Stuart Florida at sunset. Reducing harmful discharges from Lake Okeechobee will help protect the water-based economies of cities like Stuart, Florida.">
           <source src="./video/flow-1.mp4" type="video/mp4">
         </video>
       </figure>
       <figure>
-        <video muted playsinline>
+        <video muted playsinline aria-label="A woman pours a cafe con leche into a cup in Miami. South Floridians consume 3 billion gallons of water each day — enough water to fill almost 5,000 Olympic size swimming pools or make billions of cafés con leche.">
           <source src="./video/flow-2.mp4" type="video/mp4">
         </video>
       </figure>
@@ -438,8 +435,8 @@
     </div>
     <aside>
       <div class="fact">
-        <h2>$36 billion</h2>
-        <p>Amount that Florida’s tourism economy contributes in state, local and federal taxes.</p>
+        <h2>$36.9 billion</h2>
+        <p><a href="https://www.visitflorida.org/about-us/media/news-releases/article-details/?releaseId=21220">Amount</a> that Florida’s tourism economy contributes in state, local and federal taxes.</p>
       </div>
     </aside>
     <div class="caption">
@@ -452,6 +449,7 @@
 <div class="about">
   <div class="info">
     <h1>About this story</h1>
+    <p>Published May 2, 2025</p>
     <p>Story produced by <a href="https://www.compositioncollective.com/">The Composition Collective</a> and <a href="https://www.evergladesfoundation.org/">The Everglades Foundation</a>.</p>
     <p>Writing and reporting by Katie L. Burke.</p>
     <p>Animations and illustrations by Patrick Gleason.</p>
@@ -462,7 +460,7 @@
     <div class="facts">
       <div class="fact">
         <h4>THE EVERGLADES FOUNDATION</h4>
-        <p><a href="https://www.youtube.com/watch?v=yXQVOIaB5WU">8 things to know about the EAA Reservoir (Video)</a></p>
+        <p><a href="https://www.evergladesfoundation.org/post/the-economics-of-restoration-foreverglades-clean-water-economy">The Economics of Restoration ForEverglades Clean Water Economy</a></p>
       </div>
       <div class="fact">
         <h4>THIS WEEK IN FLORIDA LOCAL 10 NEWS</h4>

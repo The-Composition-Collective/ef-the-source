@@ -291,7 +291,7 @@ section > .background {
 }
 
 .intro .category:after {
-  content: url("/img/swoop.svg");
+  content: url("../img/swoop.svg");
   display: block;
 }
 
