@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://the-composition-collective.github.io/ef-the-source/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'EAA Reservoir'
 disableKinds = ['taxonomy', 'term']
 
 [markup.goldmark.renderer]
