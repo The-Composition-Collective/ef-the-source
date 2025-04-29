@@ -198,10 +198,11 @@ section > .background {
   width: 100vw;
   height: var(--vignette-height);
   object-fit: cover;
-  object-position: center bottom;
+  object-position: var(--position, center bottom);
 }
 
 .tall {
+  --position: left bottom;
   --vignette-height: 100vh;
 }
 
@@ -331,6 +332,9 @@ section > .background {
   .content.sticky {
     position: sticky;
     top: 0;
+    display: grid;
+    align-items: space-between;
+    padding-bottom: var(--space);
   }
 }
 
